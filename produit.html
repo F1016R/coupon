@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Product Grid</title>
+</head>
+<body>
+
+    <div class="product">
+        <img src="your_image_url_here.jpg" alt="Product Image">
+        <div class="description">
+          <h2>Product Name</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="price">
+          <span class="product-price">$1.50</span>
+        </div>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <input type="number" value="1" min="1" max="10">
+          <button class="plus">+</button>
+        </div>
+    <!--  <button class="cart-button">Ajouter au panier</button>-->
+    </div>
+
+    <div class="product">
+        <img src="your_image_url_here.jpg" alt="Product Image">
+        <div class="description">
+          <h2>Product Name</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="price">
+          <span class="product-price">$2</span>
+        </div>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <input type="number" value="1" min="1" max="10">
+          <button class="plus">+</button>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="your_image_url_here.jpg" alt="Product Image">
+        <div class="description">
+          <h2>Banane</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="price">
+          <span class="product-price">$1</span>
+        </div>
+        <div class="quantity">
+          <button class="minus">-</button>
+          <input type="number" value="1" min="1" max="10">
+          <button class="plus">+</button>
+        </div>
+      </div>
+    
+    <!-- Ajoutez d'autres produits ici -->
+
+  </div>
+
+  <div class="cart">
+    Total: <span id="totalAmount">$0.00</span>
+    <a href="/checkout/checkout.html"><button id="cartButton">Panier</button></a>
+  </div>
+  
+
+  <script src="scripts.js"></script>
+
+<!-- ... Votre contenu HTML existant ... -->
+
+<script>
+    function addToCart(name, price) {
+      window.location.href = `checkout.php?name=${encodeURIComponent(name)}&price=${price}`;
+    }
+  </script>
+  
+
+</body>
+</html>
